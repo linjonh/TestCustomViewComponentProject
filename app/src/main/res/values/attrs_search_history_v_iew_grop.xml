@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="SearchHistoryVIewGrop">
+        <attr name="exampleString" format="string" />
+        <attr name="textMargin" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textBackground" format="color|reference" />
+    </declare-styleable>
+</resources>

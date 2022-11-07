@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.testproject.SearchHistoryTextViewGroup
+        android:id="@+id/testViewGroup"
+        style="@style/Widget.Theme.TestProject.MyView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="40dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="40dp">
+
+    </com.example.testproject.SearchHistoryTextViewGroup>
+
+</FrameLayout>
