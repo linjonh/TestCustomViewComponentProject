@@ -29,5 +29,16 @@ class TestViewActivity : AppCompatActivity() {
             " ActivityTestViewBinding",
             " AppCompatActivity",
         )
+        binding.button2.setOnClickListener {
+            binding.testViewGroup.textStrings = mutableListOf(
+                "test2",
+                "test2",
+                "test2",
+                "test2",
+                "test2",
+                "hello",
+                "hello",
+            )
+        }
     }
 }

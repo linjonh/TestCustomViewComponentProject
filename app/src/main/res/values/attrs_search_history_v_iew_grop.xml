@@ -1,8 +1,9 @@
 <resources>
-    <declare-styleable name="SearchHistoryVIewGrop">
+    <declare-styleable name="SearchHistoryViewGroup">
         <attr name="exampleString" format="string" />
-        <attr name="textMargin" format="dimension" />
-        <attr name="textColor" format="color" />
-        <attr name="textBackground" format="color|reference" />
+        <attr name="textItemMargin" format="dimension" />
+        <attr name="textItemPadding" format="dimension" />
+        <attr name="textItemColor" format="color" />
+        <attr name="textItemBackground" format="color|reference" />
     </declare-styleable>
 </resources>
