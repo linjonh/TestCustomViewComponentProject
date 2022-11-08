@@ -4,6 +4,7 @@
         <attr name="textItemMargin" format="dimension" />
         <attr name="textItemPadding" format="dimension" />
         <attr name="textItemColor" format="color" />
+        <attr name="textItemSize" format="dimension" />
         <attr name="textItemBackground" format="color|reference" />
     </declare-styleable>
 </resources>

@@ -39,6 +39,7 @@ class SearchHistoryTextViewGroup @JvmOverloads constructor(
     var measuredLineCount: Int = 1
     var mOriginMeasuredParentHeight: Int = 0
     var textColor: Int = Color.BLACK
+    var textSize: Float = 0f
     var textMargin: Int = 0
     var textPadding: Int = 0
     var textBackgroundColor: Int = 0
@@ -48,6 +49,8 @@ class SearchHistoryTextViewGroup @JvmOverloads constructor(
         rightMarginWidthForClearSpace =
             TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50f, resources.displayMetrics)
                 .toInt()
+        textSize =
+            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, 14f, resources.displayMetrics)
         val typeArray = resources.obtainAttributes(attrs, R.styleable.SearchHistoryViewGroup)
         try {
             textBackgroundColor =
@@ -64,6 +67,7 @@ class SearchHistoryTextViewGroup @JvmOverloads constructor(
         textColor = typeArray.getColor(
             R.styleable.SearchHistoryViewGroup_textItemColor, textColor
         )
+        textSize = typeArray.getDimension(R.styleable.SearchHistoryViewGroup_textItemSize, 14f)
         textMargin =
             typeArray.getDimensionPixelSize(R.styleable.SearchHistoryViewGroup_textItemMargin, 0)
         textPadding =
@@ -132,6 +136,7 @@ class SearchHistoryTextViewGroup @JvmOverloads constructor(
             }
             childTextView.setTextColor(textColor)
             childTextView.setPadding(30, 0, 30, 0)
+            childTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize)
             if (!childTextView.hasOnClickListeners()) {
                 childTextView.setOnClickListener {
                     it as TextView
