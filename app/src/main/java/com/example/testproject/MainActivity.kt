@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, TestViewActivity::class.java))
         }
         binding.RCVBtn.setOnClickListener {
-
+            startActivity(Intent(this, TestRecyclerViewDiff::class.java))
         }
     }
 }
