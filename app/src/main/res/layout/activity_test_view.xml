@@ -19,7 +19,6 @@
         app:textItemBackground="@drawable/shape_text_item"
         app:textItemColor="#777fff"
         app:textItemSize="14sp">
-
     </com.example.testproject.SearchHistoryTextViewGroup>
 
     <Button

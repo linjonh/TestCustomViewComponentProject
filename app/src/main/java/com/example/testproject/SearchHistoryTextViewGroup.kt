@@ -76,12 +76,18 @@ class SearchHistoryTextViewGroup @JvmOverloads constructor(
         Log.e("exampleString", string ?: "")
         string?.split(",")?.let {
             Log.e("split", it.toString())
-            textStrings = (it as MutableList<String>)
+            postDelayed({
+                textStrings = (it as MutableList<String>)
+            },3000)
         }
         typeArray.recycle()
     }
 
-
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        requestLayout()
+        invalidate()
+    }
     var textStrings: MutableList<String> = mutableListOf()
         set(value) {
             if (field == null) {
@@ -151,7 +157,7 @@ class SearchHistoryTextViewGroup @JvmOverloads constructor(
 
         }
         collapseImageView?.let { imageView ->
-            imageView.setImageResource(R.drawable.icon_arrow_down)
+            imageView.setImageResource(R.drawable.picture_icon_arrow_down)
             if (imageView.background == null) {
                 imageView.background = textBackgroundDrawable!!.constantState!!.newDrawable()
             }
@@ -164,6 +170,7 @@ class SearchHistoryTextViewGroup @JvmOverloads constructor(
                         layoutParams.height = getOneLineHeight
                         Log.e("search", "getOneLineHeight:$getOneLineHeight")
                         this.layoutParams = layoutParams
+                        imageView.setImageResource(R.drawable.picture_icon_arrow_down)
                     } else {//expend
                         Log.e(
                             "search",
@@ -171,6 +178,7 @@ class SearchHistoryTextViewGroup @JvmOverloads constructor(
                         )
                         layoutParams.height = mOriginMeasuredParentHeight
                         this.layoutParams = layoutParams
+                        imageView.setImageResource(R.drawable.picture_icon_arrow_up)
                     }
                     it.isSelected = !it.isSelected
 
